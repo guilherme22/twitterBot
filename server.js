@@ -4,17 +4,17 @@ var express = require('express');
 var app = express();
 
 var T = new Twit({
-    consumer_key:         'Bu59yVjSYcPSHyythQanS4E1V'
-  , consumer_secret:      'M2mJeClZP7ULGwwMh9dfl8wqSMYhYT5CeJUjxe6uAm6MMPmFqe'
-  , access_token:         '193105220-Dug27CDo033VkrvIQgHYpJP2bGJVsnDzvIAoK1bk'
-  , access_token_secret:  'ruoMUQTSS6eQjF6UujmIHwXyLBeOtgFlopQNDcE6vYEty'
+    consumer_key:         ''
+  , consumer_secret:      ''
+  , access_token:         ''
+  , access_token_secret:  ''
 })
 
 var user = {};
 
-var stream = T.stream('statuses/filter', { track: '#EuQueria' })
+var stream = T.stream('statuses/filter', { track: '#HashTagMonitorar' })
 setInterval(function(){
-	T.post('statuses/update', { status: '@'+user.screen_name+' ##Rebelde3x066 que voce divulga-se no Twitter e Face. Rola? #AskHozier http://foradilma.azurewebsites.net/'  }, function(err, data, response) {
+	T.post('statuses/update', { status: '@'+user.screen_name+'	mensagem '  }, function(err, data, response) {
 		 	if(err)
 		 		console.log('Erro no usuário : ' + user.screen_name + " erro: " + err );
 
